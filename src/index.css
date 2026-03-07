@@ -1,0 +1,9 @@
+@import "tailwindcss";
+*{
+    font-family: cursive;
+}
+
+body {
+  cursor: none;
+  background: black;
+}

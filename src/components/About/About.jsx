@@ -1,6 +1,5 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
-import Tilt from "react-parallax-tilt";
 import profileImage from "../../assets/Rutvik (1).png";
 
 
@@ -67,21 +66,13 @@ function About() {
        <div className="flex-1 flex justify-center md:justify-end md:ml-8 lg:ml-16">
 
 
-          <Tilt
-            className="w-48 h-48 sm:w-64 sm:h-64 md:w-[30rem] md:h-[30rem] border-4 border-gray-500 rounded-full"
-            tiltMaxAngleX={20}
-            tiltMaxAngleY={20}
-            perspective={1000}
-            scale={1.05}
-            transitionSpeed={1000}
-            gyroscope={true}
-          >
+          <div className="w-48 h-48 sm:w-64 sm:h-64 md:w-[30rem] md:h-[30rem] border-4 border-gray-500 rounded-full">
             <img
               src={profileImage}
               alt="Rutvik More"
               className="w-full h-full rounded-full object-cover drop-shadow-[0_10px_20px_rgba(156,163,175,0.45)]"
             />
-          </Tilt>
+          </div>
         </div>
       </div>
     </section>

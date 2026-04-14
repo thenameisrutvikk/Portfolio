@@ -18,7 +18,7 @@ function App() {
  return (
   <>
  <FireCursor />
-  <div className="bg-black text-white min-h-screen relative overflow-x-hidden">
+  <div className="bg-[#06080d] text-white min-h-screen relative overflow-x-hidden">
     
     {/* Background Effects */}
     <BlurBlob 
@@ -26,7 +26,7 @@ function App() {
       size={{ width: '30%', height: '40%' }} 
     />
 
-    <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] opacity-20"></div>
+    <div className="absolute inset-0 bg-[linear-gradient(to_right,#d1d5db1f_1px,transparent_1px),linear-gradient(to_bottom,#d1d5db1f_1px,transparent_1px)] bg-[size:14px_24px] opacity-20"></div>
 
     {/* Content */}
     <div className="relative pt-20 z-10">

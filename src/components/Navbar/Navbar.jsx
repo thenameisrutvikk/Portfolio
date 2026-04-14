@@ -11,7 +11,7 @@ function Navbar() {
     { id: "about", label: "About" },
     { id: "skills", label: "Skills" },
     { id: "experience", label: "Experience" },
-    { id: "work", label: "Projects" },
+    { id: "projects", label: "Projects" },
     { id: "education", label: "Education" },
   ];
 
@@ -45,11 +45,11 @@ function Navbar() {
       <div className="text-white py-5 flex justify-between items-center px-8">
         {/* LOGO */}
         <div className="text-lg font-semibold cursor-pointer">
-          <span className="text-[#8245ec]">&lt;</span>
+          <span className="text-[#d1d5db]">&lt;</span>
           <span className="text-white">Rutvik</span>
-          <span className="text-[#8245ec]">/</span>
+          <span className="text-[#d1d5db]">/</span>
           <span className="text-white">More</span>
-          <span className="text-[#8245ec]">&gt;</span>
+          <span className="text-[#d1d5db]">&gt;</span>
         </div>
 
         {/* Menu */}
@@ -57,8 +57,8 @@ function Navbar() {
           {menuItems.map((item) => (
             <li
               key={item.id}
-              className={`cursor-pointer hover:text-[#8245ec] ${
-                activeSection === item.id ? "text-[#8245ec]" : ""
+              className={`cursor-pointer hover:text-[#d1d5db] ${
+                activeSection === item.id ? "text-[#d1d5db]" : ""
               }`}
             >
               <button onClick={() => handleMenuItemClick(item.id)}>
@@ -73,7 +73,7 @@ function Navbar() {
             href="https://github.com/thenameisrutvikk"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-[#8245ec]"
+            className="text-gray-300 hover:text-[#d1d5db]"
           >
             <FaGithub size={24} />
           </a>
@@ -81,7 +81,7 @@ function Navbar() {
             href="https://www.linkedin.com/in/rutvik-more-87770b2b3/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-[#8245ec]"
+            className="text-gray-300 hover:text-[#d1d5db]"
           >
             <FaLinkedin size={24} />
           </a>
@@ -91,12 +91,12 @@ function Navbar() {
         <div className="md:hidden">
           {isOpen ? (
             <FiX
-              className="text-3xl text-[#8245ec] cursor-pointer"
+              className="text-3xl text-[#d1d5db] cursor-pointer"
               onClick={() => setIsOpen(false)}
             />
           ) : (
             <FiMenu
-              className="text-3xl text-[#8245ec] cursor-pointer"
+              className="text-3xl text-[#d1d5db] cursor-pointer"
               onClick={() => setIsOpen(true)}
             />
           )}
@@ -105,13 +105,13 @@ function Navbar() {
 
       {/* Mobile Menu Items */}
       {isOpen && (
-        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#050414] bg-opacity-50 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-lg md:hidden">
+        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#0f1115] bg-opacity-85 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-lg md:hidden border border-gray-500/30">
           <ul className="flex flex-col items-center space-y-4 py-4 text-gray-300">
             {menuItems.map((item) => (
               <li
                 key={item.id}
                 className={`cursor-pointer hover:text-white ${
-                  activeSection === item.id ? "text-[#8245ec]" : ""
+                  activeSection === item.id ? "text-[#d1d5db]" : ""
                 }`}
               >
                 <button onClick={() => handleMenuItemClick(item.id)}>
@@ -121,7 +121,7 @@ function Navbar() {
             ))}
             <div className="flex space-x-4">
               <a
-                href="https://github.com/codingmastr"
+                href="https://github.com/thenameisrutvikk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white"
@@ -129,7 +129,7 @@ function Navbar() {
                 <FaGithub size={24} />
               </a>
               <a
-                href="https://www.linkedin.com/in/tarun-kaushik-553b441a4"
+                href="https://www.linkedin.com/in/rutvik-more-87770b2b3/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white"

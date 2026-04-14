@@ -24,15 +24,15 @@ function About() {
             Rutvik More
           </h2>
           {/* Skills Heading with Typing Effect */}
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#d1d5db] leading-tight">
             <span className="text-white">I am a </span>
             <TypeAnimation
   sequence={[
-    " JAVA DEVELOPER",
+    " SOFTWARE DEVELOPER INTERN",
     1500,
-    "WEB DEVELOPER",
+    "FULL STACK DEVELOPER",
     1500,
-    "SOFTWARE ENGINEER",
+    "JAVA + MERN DEVELOPER",
     1500,
   ]}
   wrapper="span"
@@ -43,21 +43,20 @@ function About() {
           </h3>
           {/* About Me Paragraph */}
           <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
-            I am a full-stack developer with over 6 Months of experience in
-            building scalable web applications. Skilled in both front-end and
-            back-end development, I specialize in the MERN stack and other
-            modern technologies to create seamless user experiences and
-            efficient solutions.
+            Motivated full-stack developer with strong skills in Java and the
+            MERN stack, backed by internship experience at COJAG Smart
+            Technology. I build responsive interfaces, secure backend APIs, and
+            database-driven applications with a focus on performance,
+            maintainability, and clean user experience.
           </p>
           {/* Resume Button */}
           <a
-            href="https://drive.google.com/file/d/16P92HyeOsvS7XFCfG0j0SiNXLfhRlkKe/view?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/RUTVIKMORE-Resume.pdf"
+            download="RUTVIKMORE-Resume.pdf"
             className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"
             style={{
-              background: 'linear-gradient(90deg, #8245ec, #a855f7)',
-              boxShadow: '0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #8245ec',
+              background: 'linear-gradient(90deg, #374151, #9ca3af)',
+              boxShadow: '0 0 2px #9ca3af, 0 0 8px #9ca3af, 0 0 28px rgba(156,163,175,0.7)',
             }}
           >
             DOWNLOAD RESUME
@@ -69,7 +68,7 @@ function About() {
 
 
           <Tilt
-            className="w-48 h-48 sm:w-64 sm:h-64 md:w-[30rem] md:h-[30rem] border-4 border-purple-700 rounded-full"
+            className="w-48 h-48 sm:w-64 sm:h-64 md:w-[30rem] md:h-[30rem] border-4 border-gray-500 rounded-full"
             tiltMaxAngleX={20}
             tiltMaxAngleY={20}
             perspective={1000}
@@ -80,7 +79,7 @@ function About() {
             <img
               src={profileImage}
               alt="Rutvik More"
-              className="w-full h-full rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]"
+              className="w-full h-full rounded-full object-cover drop-shadow-[0_10px_20px_rgba(156,163,175,0.45)]"
             />
           </Tilt>
         </div>

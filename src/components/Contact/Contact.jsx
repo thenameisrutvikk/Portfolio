@@ -50,14 +50,17 @@ const Contact = () => {
       {/* Title */}
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold text-white">CONTACT</h2>
-        <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
+        <div className="w-32 h-1 bg-gray-400 mx-auto mt-4"></div>
         <p className="text-gray-400 mt-4 text-lg font-semibold">
           I’d love to hear from you—reach out for any opportunities or questions!
+        </p>
+        <p className="text-gray-500 mt-3 text-sm">
+          Email: rutvikmore2004@gmail.com | Phone: +91 9373963036 | Nanded, Maharashtra
         </p>
       </div>
 
       {/* Form Card */}
-      <div className="mt-8 w-full max-w-md bg-[#0d081f] p-6 rounded-xl shadow-lg border border-gray-700">
+      <div className="mt-8 w-full max-w-md bg-[#121418] p-6 rounded-xl shadow-lg border border-gray-500/35">
         <h3 className="text-xl font-semibold text-white text-center">
           Connect With Me 🚀
         </h3>
@@ -72,7 +75,7 @@ const Contact = () => {
             name="user_email"
             placeholder="Your Email"
             required
-            className="p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+            className="p-3 rounded-md bg-[#1b1f26] text-white border border-gray-600 focus:outline-none focus:border-gray-400"
           />
 
           <input
@@ -80,7 +83,7 @@ const Contact = () => {
             name="user_name"
             placeholder="Your Name"
             required
-            className="p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+            className="p-3 rounded-md bg-[#1b1f26] text-white border border-gray-600 focus:outline-none focus:border-gray-400"
           />
 
           <input
@@ -88,7 +91,7 @@ const Contact = () => {
             name="subject"
             placeholder="Subject"
             required
-            className="p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+            className="p-3 rounded-md bg-[#1b1f26] text-white border border-gray-600 focus:outline-none focus:border-gray-400"
           />
 
           <textarea
@@ -96,13 +99,13 @@ const Contact = () => {
             rows="4"
             placeholder="Message"
             required
-            className="p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+            className="p-3 rounded-md bg-[#1b1f26] text-white border border-gray-600 focus:outline-none focus:border-gray-400"
           />
 
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-gradient-to-r from-purple-600 to-pink-500 py-3 text-white font-semibold rounded-md hover:opacity-90 transition"
+            className="w-full bg-gradient-to-r from-gray-700 to-gray-400 py-3 text-white font-semibold rounded-md hover:opacity-90 transition"
           >
             {loading ? "Sending..." : "Send"}
           </button>

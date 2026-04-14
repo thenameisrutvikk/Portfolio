@@ -10,6 +10,7 @@ import Skills from './components/Skills/Skills'
 import ScrollTopButton from './components/ScrollTopButton'
 import BlurBlob from './BlurBlob'
 import FireCursor from "./FireCursor";
+import AnimatedBackground from './components/AnimatedBackground'
 
 
   
@@ -20,6 +21,7 @@ function App() {
   <>
  <FireCursor />
   <div className="bg-[#06080d] text-white min-h-screen relative overflow-x-hidden">
+      <AnimatedBackground />
     
     {/* Background Effects */}
     <BlurBlob 

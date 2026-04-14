@@ -48,18 +48,22 @@ function Navbar() {
 
   return (
      <nav
-      className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw] ${
-        isScrolled ? "bg-transparent" : "bg-black"
+      className={`fixed top-3 md:top-4 left-1/2 -translate-x-1/2 w-[95%] md:w-[90%] lg:w-[68%] z-50 transition-all duration-300 rounded-2xl px-2 md:px-3 ${
+        isScrolled
+          ? "bg-[#0b1019]/78 border border-white/15 backdrop-blur-xl shadow-[0_14px_38px_rgba(2,6,23,0.55)]"
+          : "bg-[#06080d]/90 border border-white/10"
       }`}
     >
-      <div className="text-white py-5 flex justify-between items-center px-8">
+      <div className="text-white py-3 md:py-4 flex justify-between items-center px-3 md:px-5">
         {/* LOGO */}
-        <div className="text-lg font-semibold cursor-pointer">
-          <span className="text-[#d1d5db]">&lt;</span>
-          <span className="text-white">Rutvik</span>
-          <span className="text-[#d1d5db]">/</span>
-          <span className="text-white">More</span>
-          <span className="text-[#d1d5db]">&gt;</span>
+        <div className="cursor-pointer flex items-center gap-3">
+          <div className="h-10 w-10 rounded-xl border border-white/40 bg-gradient-to-br from-gray-100 via-gray-300 to-gray-500 text-black text-xs font-extrabold flex items-center justify-center tracking-wide shadow-[0_6px_18px_rgba(209,213,219,0.25)]">
+            RM
+          </div>
+          <div className="leading-tight">
+            <p className="text-sm font-semibold text-white tracking-wide">Rutvik More</p>
+            <p className="text-[10px] uppercase text-gray-300 tracking-[0.22em]">Software Engineer</p>
+          </div>
         </div>
 
         {/* Menu */}
@@ -67,12 +71,17 @@ function Navbar() {
           {menuItems.map((item) => (
             <li
               key={item.id}
-              className={`cursor-pointer hover:text-[#d1d5db] ${
+              className={`cursor-pointer hover:text-[#d1d5db] transition-colors duration-300 ${
                 activeSection === item.id ? "text-[#d1d5db]" : ""
               }`}
             >
-              <button onClick={() => handleMenuItemClick(item.id)}>
+              <button onClick={() => handleMenuItemClick(item.id)} className="relative pb-1">
                 {item.label}
+                <span
+                  className={`absolute left-0 -bottom-0.5 h-[2px] rounded-full bg-gradient-to-r from-gray-300 to-white transition-all duration-300 ${
+                    activeSection === item.id ? "w-full opacity-100" : "w-0 opacity-0"
+                  }`}
+                />
               </button>
             </li>
           ))}
@@ -124,12 +133,12 @@ function Navbar() {
 
       {/* Mobile Menu Items */}
       {isOpen && (
-        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#0f1115] bg-opacity-85 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-lg md:hidden border border-gray-500/30">
+        <div className="absolute top-[72px] left-1/2 transform -translate-x-1/2 w-[94%] bg-[#0f1115]/95 backdrop-blur-lg z-50 rounded-xl shadow-lg md:hidden border border-gray-500/30">
           <ul className="flex flex-col items-center space-y-4 py-4 text-gray-300">
             {menuItems.map((item) => (
               <li
                 key={item.id}
-                className={`cursor-pointer hover:text-white ${
+                className={`cursor-pointer hover:text-white transition-colors duration-300 ${
                   activeSection === item.id ? "text-[#d1d5db]" : ""
                 }`}
               >

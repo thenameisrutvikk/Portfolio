@@ -9,3 +9,69 @@ body {
   cursor: none;
   background: black;
 }
+
+.animated-bg-root {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.animated-bg-canvas {
+  position: absolute;
+  inset: 0;
+}
+
+.animated-bg-particles {
+  position: absolute;
+  inset: 0;
+}
+
+.animated-bg-vignette {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 22%, rgba(59, 130, 246, 0.16), transparent 28%),
+    radial-gradient(circle at 78% 18%, rgba(168, 85, 247, 0.16), transparent 26%),
+    radial-gradient(circle at 50% 48%, rgba(34, 211, 238, 0.08), transparent 22%),
+    linear-gradient(180deg, rgba(1, 4, 12, 0.2), rgba(1, 4, 12, 0.76));
+  filter: blur(1px);
+}
+
+.animated-bg-gradient {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, rgba(59, 130, 246, 0.08), transparent 26%, transparent 74%, rgba(168, 85, 247, 0.1)),
+    linear-gradient(180deg, rgba(2, 6, 23, 0.2), rgba(2, 6, 23, 0.44));
+  mix-blend-mode: screen;
+  opacity: 0.92;
+}
+
+.animated-bg-noise {
+  position: absolute;
+  inset: 0;
+  opacity: 0.075;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.42) 0.55px, transparent 0.55px);
+  background-size: 3px 3px;
+  mix-blend-mode: overlay;
+}
+
+@media (max-width: 768px) {
+  .animated-bg-vignette {
+    background:
+      radial-gradient(circle at 18% 18%, rgba(59, 130, 246, 0.12), transparent 34%),
+      radial-gradient(circle at 82% 12%, rgba(168, 85, 247, 0.12), transparent 32%),
+      radial-gradient(circle at 50% 50%, rgba(34, 211, 238, 0.06), transparent 28%),
+      linear-gradient(180deg, rgba(1, 4, 12, 0.28), rgba(1, 4, 12, 0.84));
+  }
+
+  .animated-bg-gradient {
+    opacity: 0.86;
+  }
+
+  .animated-bg-noise {
+    opacity: 0.05;
+  }
+}

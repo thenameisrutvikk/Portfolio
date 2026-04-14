@@ -36,6 +36,16 @@ function Navbar() {
     }
   };
 
+  const handleHireMeClick = () => {
+    setActiveSection("contact");
+    setIsOpen(false);
+
+    const section = document.getElementById("connect-with-me") || document.getElementById("contact");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
      <nav
       className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw] ${
@@ -67,6 +77,14 @@ function Navbar() {
             </li>
           ))}
         </ul>
+        <div className="hidden md:flex items-center gap-4">
+          <button
+            onClick={handleHireMeClick}
+            className="px-4 py-2 text-sm font-semibold rounded-full border border-gray-300/60 bg-linear-to-r from-gray-600 to-gray-400 text-white hover:from-gray-500 hover:to-gray-300 transition duration-300 shadow-[0_0_14px_rgba(156,163,175,0.25)]"
+          >
+            Hire Me
+          </button>
+
      {/* Social Icons */}
         <div className="hidden md:flex space-x-4">
           <a
@@ -85,6 +103,7 @@ function Navbar() {
           >
             <FaLinkedin size={24} />
           </a>
+        </div>
         </div>
 
         {/* Mobile Menu Icon */}
@@ -119,6 +138,12 @@ function Navbar() {
                 </button>
               </li>
             ))}
+            <button
+              onClick={handleHireMeClick}
+              className="px-4 py-2 text-sm font-semibold rounded-full border border-gray-300/60 bg-linear-to-r from-gray-600 to-gray-400 text-white hover:opacity-90 transition"
+            >
+              Hire Me
+            </button>
             <div className="flex space-x-4">
               <a
                 href="https://github.com/thenameisrutvikk"

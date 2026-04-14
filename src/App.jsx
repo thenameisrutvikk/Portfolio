@@ -7,6 +7,7 @@ import Experience from './components/Expericence/Experience'
 import Navbar from './components/Navbar/Navbar'
 import Project from './components/Project/Project'
 import Skills from './components/Skills/Skills'
+import ScrollTopButton from './components/ScrollTopButton'
 import BlurBlob from './BlurBlob'
 import FireCursor from "./FireCursor";
 
@@ -37,6 +38,7 @@ function App() {
       <Experience />
       <Education />
       <Contact />
+      <ScrollTopButton />
     </div>
 
   </div>

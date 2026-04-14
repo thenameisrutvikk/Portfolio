@@ -60,7 +60,7 @@ const Contact = () => {
       </div>
 
       {/* Form Card */}
-      <div className="mt-8 w-full max-w-md bg-[#121418] p-6 rounded-xl shadow-lg border border-gray-500/35">
+      <div id="connect-with-me" className="mt-8 w-full max-w-md bg-[#121418] p-6 rounded-xl shadow-lg border border-gray-500/35 scroll-mt-28">
         <h3 className="text-xl font-semibold text-white text-center">
           Connect With Me 🚀
         </h3>
